@@ -94,7 +94,8 @@ void stencil(const int nx, const int ny,  double * restrict image, double * rest
   }
   //last column
   for(int i = 1; i< ny-1 ; ++i){
-    tmp_image[(nx-1)+ny*i] = 0.6*image[(nx-1)+ny*i] + 0.1*image[(nx-2)+ ny*i] + 0.1*image[(nx-1)+ny*(i-1)] + 0.1*image[(nx-1) + ny*(i+1)];
+    int base  = nx-1 + ny*i;
+    tmp_image[base] = 0.6*image[base] + 0.1*image[base-1] + 0.1*image[base -ny] + 0.1*image[base + ny];
   }
 
 
