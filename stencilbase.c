@@ -81,14 +81,14 @@ void stencil(const int nx, const int ny,  double * restrict image, double * rest
    tmp_image[0+ny*i] = 0.6*image[0+ny*i] + 0.1*image[1+ ny*i] + 0.1*image[0+ny*(i-1)] + 0.1*image[0 + ny*(i+1)];
   }
 
-  //editing the values of the (ny-1)*(nx-1) pixels
+  //editing the values of the (ny-1)*(nx-1) pisxels
   for(int i = 1 ; i<ny-1; ++i){
    for(int j = 1 ; j<nx-1; ++j){
      int base = j+ny*i;
      tmp_image[base] = image[base] * 0.6
-                       + image[base+1] *0.1
-                       + image[base -ny] *0.1
+                       + image[base+1] *0.1                    
                        + image[base-1]  *0.1
+                       + image[base -ny] *0.1
                        + image[base + ny] *0.1;
    }
   }
