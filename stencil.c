@@ -5,6 +5,8 @@
 // Define output file name
 #define OUTPUT_FILE "stencil.pgm"
 
+//This is averaging 0.3 seconds at home 
+
 void stencil(const int nx, const int ny, double *  image, double *  tmp_image);
 void init_image(const int nx, const int ny, double *  image, double *  tmp_image);
 void output_image(const char * file_name, const int nx, const int ny, double *image);
