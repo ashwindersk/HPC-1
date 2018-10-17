@@ -11,7 +11,6 @@ void stencil(const int nx, const int ny, double *  image, double *  tmp_image);
 void init_image(const int nx, const int ny, double *  image, double *  tmp_image);
 void output_image(const char * file_name, const int nx, const int ny, double *image);
 double wtime(void);
-
 int main(int argc, char *argv[]) {
 
   // Check usage
@@ -82,19 +81,20 @@ void stencil(const int nx, const int ny,  double * restrict image, double * rest
    tmp_image[0+ny*i] = 0.6*image[0+ny*i] + 0.1*image[1+ ny*i] + 0.1*image[0+ny*(i-1)] + 0.1*image[0 + ny*(i+1)];
   }
 
-  //editing the values of the (ny-1)*(nx-1) pixels
+  //editing the values of the (ny-1)*(nx-1) pisxels
   for(int i = 1 ; i<ny-1; ++i){
    for(int j = 1 ; j<nx-1; ++j){
-     tmp_image[j+ny*i] = image[j+ny*i] * 0.6
-                       + image[j+1 + ny*i] *0.1
-                       + image[j+ny*(i-1)] *0.1
-                       + image[j-1+ ny*i]  *0.1
-                       + image[j+ny*(i+1)] *0.1;
+     int base = j+ny*i;
+   
+   
+     tmp_image[base] = image[base-1] *0.1 + image[base] *0.3 + image[base+1]*0.1;
+     tmp_image[base] = image[base-ny] *0.1 + image[base]* 0.3 + image[base + ny];
    }
   }
   //last column
   for(int i = 1; i< ny-1 ; ++i){
-    tmp_image[(nx-1)+ny*i] = 0.6*image[(nx-1)+ny*i] + 0.1*image[(nx-2)+ ny*i] + 0.1*image[(nx-1)+ny*(i-1)] + 0.1*image[(nx-1) + ny*(i+1)];
+    int base  = nx-1 + ny*i;
+    tmp_image[base] = 0.6*image[base] + 0.1*image[base-1] + 0.1*image[base -ny] + 0.1*image[base + ny];
   }
 
 
