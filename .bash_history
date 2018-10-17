@@ -1,73 +1,3 @@
-passwd
-scp bcp3:hello.c ak16625@bluecrystal3.bris.ac.uk:test.c
-scp hello.c ak16625@bluecrystal3.bris.ac.uk:test.c
-scp bcp3:hello.c ak16625@bluecrystalp3.bris.ac.uk:test.c
-scp hello.c ak16625@bluecrystalp3.bris.ac.uk:test.c
-ls
-:q
-#1538649587
-logout
-#1538650390
-module li
-#1538650403
-module av
-#1538650434
-module av gcc
-#1538650503
-module load gcc/4.7.0
-#1538650509
-module li
-#1538650539
-module rm gcc/4.7.0
-#1538650800
-qstat
-#1538650842
-clear
-#1538650849
-qstat -q
-#1538650875
-qstat -q teaching
-#1538650892
-qstat -u ak16625
-#1538650906
-qstat -u $USER
-mkdir .ssh
-touch .ssh/authorized_keys
-chmod .ssh/authorized_keys
-chmod 644 .ssh/authorized_keys
-quit
-ls
-ls -la 
-ls .ssh
-ls authorized_keys
-cat authorized_keys
-cat .ssh/authorized_keys
-qsub stencil.job -n ashcode
-ls
-cd ..
-ls
-cd ak16625/
-ls
-logout
-ls
-make
-ls
-#
-qsub stencil.job
-./stencil 1024 1024 100
-ls
-./stencil 1024 1024 100
-perf gprof 
-perf --gelp
-gprof --help
-gprof make
-gprof Makefile
-gprof stencil.c
-gprof stencil
-ls
-gcc -03 -fopenmp -pg -g -i stencil.gprof stencil.c
-gcc -03 -fopenmp -pg -g -o stencil.gprof stencil.c
-gcc -c99 -fopenmp -pg -g -o stencil.gprof stencil.c
 gcc -03 -fopenmp -pg -g -o stencil.gprof stencil.c
 gcc -std=c99 -fopenmp -pg -g -o stencil.gprof stencil.c
 qsub ./stencil.gprof
@@ -880,4 +810,424 @@ qstat teaching
 ./stencil 1024 1024 100
 logout
 ls
+logout
+git pull
+make
+qsub stencil.job
+qstat teaching 
+./stencil 1024 1024 100
+ls
+open stencil.c
+vim stencil.c
+make
+vim stencil.c
+make
+vim stencil.c
+make
+qsub stencil.job
+qstat teaching
+./stencil 1024 1024 100
+ls
+rm stencil.c
+ls
+make
+ls
+make
+qsub stencil.job
+./stencil 1024 1024 100
+git checkout 0.6 Average
+git checkout 0.6-Average
+git fetch
+git checkout 0.6-Average
+git add -A
+git commit -m "the first -0.6
+git push
+logout
+./stencil 1024 1024 100
+python check.py --ref-stencil-file stencil_1024_1024_100.pgm --stencil-file stencil.pgm
+./stencil 1024 1024 100
+#1539783800
+vim Makefile
+#1539783807
+make
+#1539783809
+./stencil 1024 1024 100
+#1539783843
+./stencil 4096 4096 100
+#1539784000
+./stencil 1024 1024 100
+#1539784020
+logout
+./stencil 1024 1024 100
+make
+./stencil 1024 1024 100
+logout
+vim stencil.c
+./stencil 1024 1024 100
+ls
+python check.py --ref-stencil-file stencil_1024_1024_100.pgm --stencil-file stencil.pgm
+git pull
+ls
+git fetch
+ls
+git status
+git checkout
+git checkout compiler-change
+git pull
+git status
+git fetch
+git status
+git pull
+clear
+ls
+make
+qsub stencil.job
+qstat teaching
+./stencil 1024 1024 100
+git log
+git checkout master
+make
+qsub stenci.job
+qsub stencil.job
+qstat teaching 
+./stencil 1024 1024 100
+git log
+git pull
+make
+./stencil 1024 1024 100
+vim stencil.c
+#1539794781
+ls
+#1539794799
+gprof -l stencil gmon.out
+#1539794969
+logout
+#1539795211
+git fetch
+#1539795228
+git checkout changing-data-types
+#1539795241
+git pull
+#1539795248
+vim stencil.c
+#1539795350
+git pull
+#1539795366
+logout
+#1539795587
+ls
+#1539795612
+rm .stencil.c.swp
+#1539795617
+cd ..
+#1539795618
+ls
+#1539795620
+logout
+ls
+git checkout changing-data-types
+ls
+git pull
+ls
+rm stencil.c 
+mv stencilbase.c stencil.c
+ls
+rm stencil1.c
+ls
+vim stencil.c
+rm stencil
+make
+qsub stencil.job
+qstat teaching 
+./stencil 1024 1024 100
+qstat teaching 
+./stencil 1024 1024 100
+gprof -l stencil gmon.out
+logout
+#1539796537
+git checkout changing-data-types
+#1539796541
+git pull
+#1539796547
+git fetch
+#1539796561
+ls
+#1539796585
+vim stencil.c
+#1539796597
+git pull
+#1539796601
+ls
+#1539796626
+git checkout changing-data-types
+#1539796633
+git pull
+#1539796635
+ls
+#1539796642
+vim stencilbase.c
+#1539796646
+ls
+#1539796696
+git checkout merging-for-loop
+#1539796700
+git pull
+#1539796702
+ls
+#1539796712
+vim stencil.c
+#1539796739
+vim stencilbase.c
+#1539796770
+rm stencil
+#1539796774
+rm stencil.c
+#1539796781
+mv stencilbase.c stencil.c
+#1539796782
+ls
+#1539796784
+make
+#1539796793
+qsub stencil.job
+#1539796798
+vim stencil.job
+#1539796826
+qstat teaching
+#1539796834
+./stencil 1024 1024 100
+#1539796853
+./stencil 4096 4096 100
+#1539796898
+logout
+#1539797065
+gprof -l stencil gmon.out
+#1539797097
+vim stencil.c
+#1539797170
+python check.py --ref-stencil-file stencil_1024_1024_100.pgm --stencil-file stencil.pgm
+#1539797175
+./stencil 1024 1024 100
+#1539797178
+python check.py --ref-stencil-file stencil_1024_1024_100.pgm --stencil-file stencil.pgm
+#1539797312
+logout
+#1539797392
+git checkout merging-for-loop
+#1539797396
+git pull
+#1539797398
+ls
+#1539797408
+vim stencilbase.c
+#1539797430
+make
+#1539797434
+rm stencil
+#1539797441
+rm stencil.c
+#1539797449
+mv stencilbase.c stencil.c
+#1539797455
+make
+#1539797469
+qsub stencil.job
+#1539797548
+qstat teaching 
+#1539797561
+./stencil 1024 1024 100
+#1539797577
+./stencil 4096 4096 100
+#1539797861
+./stencil 1024 1024 100
+#1539797865
+python check.py --ref-stencil-file stencil_1024_1024_100.pgm --stencil-file stencil.pgm
+#1539798216
+LOGOUT
+#1539798218
+logout
+#1539798289
+git checkout merging-for-loop
+#1539798292
+git pull
+#1539798299
+ls
+#1539798309
+rm stencil
+#1539798312
+rm stencil.c
+#1539798320
+mv stencilbase.c stencil.c
+#1539798322
+make
+#1539798327
+qsub stencil.job
+#1539798331
+qstat teaching
+#1539798401
+./stencil 1024 1024 100
+#1539798471
+./stencil 4096 4096 100
+#1539798496
+gprof -l stencil gmon.out
+#1539799557
+logout
+#1539799592
+git checkout intel-SIMD
+#1539799609
+git fetch
+#1539799614
+git checkout intel-SIMD
+#1539799630
+module av
+#1539799635
+module av lanuages
+#1539799660
+vim .bashrc
+#1539799667
+vim Makefile
+#1539799681
+vim stencil.c
+#1539799749
+make
+#1539799761
+vim stencil.c
+#1539799782
+make
+#1539799903
+vim stencil.c
+#1539800019
+modules av intel
+#1539800023
+module av intel
+#1539800040
+module av openmp
+#1539800060
+vim .bashrc
+#1539800075
+make
+#1539800084
+vim stencil.c
+#1539800090
+rm stencil
+#1539800094
+make
+#1539800194
+vim stencil.c
+#1539800403
+make
+#1539800421
+qsub stencil.job
+#1539800441
+ls
+#1539800449
+qstat teaching
+#1539800482
+./stencil 1024 1024 100
+#1539800494
+./stencil 4096 4096 100
+#1539800548
+vim stencil.c
+#1539800788
+make
+#1539800793
+qsub stencil.job
+#1539800801
+qstat teaching 
+#1539800821
+qsub stencil.job
+#1539800824
+qstat teaching 
+#1539800869
+./stencil 1024 1024 100
+#1539800905
+./stencil 4096 4096 100
+#1539801006
+gprof -l stencil gmon.out
+#1539801044
+vim stencil.c
+#1539801395
+make
+#1539801401
+qsub stencil.job
+#1539801418
+qstat teaching 
+#1539801472
+./stencil 1024 1024 100
+#1539801508
+vim stencil.c
+#1539801531
+gprof -l stencil gmon.out
+#1539801554
+vim stencil.c
+#1539802015
+make
+#1539802025
+qsub stencil.job
+#1539802033
+qstat teaching 
+#1539802079
+./stencil 1024 1024 100
+#1539802095
+./stencil 4096 4096 100
+#1539802148
+./stencil 1024 1024 100
+#1539802184
+vim stencil.c
+#1539802195
+gprof -l stencil gmon.out
+#1539802273
+vim stencil.c
+#1539802914
+git checkout intel-SIMD
+#1539802931
+git add stencil.c
+#1539802949
+git commit -m "row and column seperation in main loop"
+#1539802952
+git push
+make
+vim stencil.c
+make
+qsub stencil.job
+qstat teaching 
+./stencil 1024 1024 100
+ls
+vim makefile
+vim Makefile 
+rm stencil
+make
+vim Makefile 
+vim stencil.c
+make
+icc -help
+vim makefile
+vim Makefile 
+make
+rm stencil
+make
+vim Makefile 
+make
+rm stencil
+make
+qsub stencil.job
+qstat teaching 
+./stencil 1024 1024 100
+./stencil 4096 4096 100
+./stencil 1024 1024 100
+./stencil 4096 4096 100
+./stencil 8000 8000 100
+vim stencil.c
+make
+qsub stencil.job
+qstat teaching 
+./stencil 1024 1024 100
+./stencil 4096 4096 100
+vim stencil.c
+qsub stencil.job
+qstat teaching 
+./stencil 1024 1024 100
+./stencil 4096 4096 100
+vim stencil.c
+loggout
 logout

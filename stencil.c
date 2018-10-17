@@ -7,9 +7,9 @@
 
 //This is averaging 0.3 seconds at home 
 
-void stencil(const int nx, const int ny, double *  image, double *  tmp_image);
-void init_image(const int nx, const int ny, double *  image, double *  tmp_image);
-void output_image(const char * file_name, const int nx, const int ny, double *image);
+void stencil(const int nx, const int ny, float * image, float * tmp_image);
+void init_image(const int nx, const int ny, float * image, float * tmp_image);
+void output_image(const char * file_name, const int nx, const int ny, float *image);
 double wtime(void);
 int main(int argc, char *argv[]) {
 
@@ -32,9 +32,9 @@ int main(int argc, char *argv[]) {
 
 
 // double *tmp_image = malloc(sizeof(double)*nx*ny);
- double *image = malloc(sizeof(double)*ny*nx);
+ float *image = malloc(sizeof(float)*ny*nx);
 
- double *tmp_image = malloc(sizeof(double)*ny*nx);
+ float *tmp_image = malloc(sizeof(float)*ny*nx);
 
 
 
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
   free(image);
 }
 
-void stencil(const int nx, const int ny,  double * restrict image, double * restrict tmp_image) {
+void stencil(const int nx, const int ny,  float *restrict image, float *restrict tmp_image) {
 
 
   //manually amending the values of the corners
@@ -85,10 +85,9 @@ void stencil(const int nx, const int ny,  double * restrict image, double * rest
   for(int i = 1 ; i<ny-1; ++i){
    for(int j = 1 ; j<nx-1; ++j){
      int base = j+ny*i;
-   
-   
+     #pragma omp simd 
      tmp_image[base] = image[base-1] *0.1 + image[base] *0.3 + image[base+1]*0.1;
-     tmp_image[base] = image[base-ny] *0.1 + image[base]* 0.3 + image[base + ny];
+     tmp_image[base] = image[base -ny]*0.1 + image[base]*0.3 + image[base +ny]*0.1;
    }
   }
   //last column
@@ -106,7 +105,7 @@ void stencil(const int nx, const int ny,  double * restrict image, double * rest
  }
 
 // Create the input image
-void init_image(const int nx, const int ny, double *  image, double *  tmp_image) {
+void init_image(const int nx, const int ny, float * image, float * tmp_image) {
   // Zero everything
   for (int j = 0; j < ny; ++j) {
     for (int i = 0; i < nx; ++i) {
@@ -132,7 +131,7 @@ void init_image(const int nx, const int ny, double *  image, double *  tmp_image
 }
 
 // Routine to output the image in Netpbm grayscale binary image format
-void output_image(const char * file_name, const int nx, const int ny, double *image) {
+void output_image(const char * file_name, const int nx, const int ny, float *image) {
 
   // Open output file
   FILE *fp = fopen(file_name, "w");
