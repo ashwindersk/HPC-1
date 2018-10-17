@@ -7,8 +7,8 @@
 
 //This is averaging 0.3 seconds at home 
 
-void stencil(const int nx, const int ny, double *  image, double *  tmp_image);
-void init_image(const int nx, const int ny, double *  image, double *  tmp_image);
+void stencil(const int nx, const int ny, float * image, float * tmp_image);
+void init_image(const int nx, const int ny, float * image, float * tmp_image);
 void output_image(const char * file_name, const int nx, const int ny, double *image);
 double wtime(void);
 int main(int argc, char *argv[]) {
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
   free(image);
 }
 
-void stencil(const int nx, const int ny,  double * restrict image, double * restrict tmp_image) {
+void stencil(const int nx, const int ny,  float *restrict image, float *restrict tmp_image) {
 
 
   //manually amending the values of the corners
@@ -85,11 +85,8 @@ void stencil(const int nx, const int ny,  double * restrict image, double * rest
   for(int i = 1 ; i<ny-1; ++i){
    for(int j = 1 ; j<nx-1; ++j){
      int base = j+ny*i;
-     tmp_image[base] = image[base] * 0.6
-                       + (image[base+1]                     
-                       + image[base-1]  
-                       + image[base -ny] 
-                       + image[base + ny] )*0.1;
+     tmp_image[base] = image[base-1] *0.1 + image[base] *0.3 + image[base+1]*0.1;
+     tmp_image[base] = image[base -ny]*0.1 + image[base]*0.3 + image[base +ny]*0.1;
    }
   }
   //last column
@@ -107,7 +104,7 @@ void stencil(const int nx, const int ny,  double * restrict image, double * rest
  }
 
 // Create the input image
-void init_image(const int nx, const int ny, double *  image, double *  tmp_image) {
+void init_image(const int nx, const int ny, float * image, float * tmp_image) {
   // Zero everything
   for (int j = 0; j < ny; ++j) {
     for (int i = 0; i < nx; ++i) {
