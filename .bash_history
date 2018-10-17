@@ -844,3 +844,40 @@ qstat teaching
 git add -A 
 #1539779581
 logout
+./stencil 1024 1024 100
+vim Makefile
+make
+vim stencil.c
+make
+qsub stencil.job
+qstat teaching
+./stencil 1024 1024 100
+vim stencil.c
+make
+vim stencil.c
+make
+qsub stencil.job
+qstat teaching
+./stencil 1024 1024 100
+vim stencil.c
+ls
+vim stencil.c
+git add -A
+git commit -m "This is the short0 0.33 variable order change"
+git push 
+logout
+git pull
+git status
+logout
+ls
+make
+./stencil 1024 1024 100
+logout
+ls
+gcc -std=c99 -Ofast -pg -g -Wall stencil1.c -o stencil
+qsub stencil.job
+qstat teaching
+./stencil 1024 1024 100
+logout
+ls
+logout

@@ -81,19 +81,21 @@
 		
 
 # File marks:
-'0  99  0  ~/stencil.c
-'1  176  0  ~/stencil.c
-'2  78  23  ~/stencil.c
-'3  9  85  ~/stencil.c
-'4  17  58  ~/stencil.c
-'5  2  23  ~/Makefile
-'6  12  0  ~/.bashrc
-'7  33  4  ~/stencil.c
-'8  49  0  ~/stencil.c
-'9  1  0  ~/Makefil
+'0  174  36  ~/stencil.c
+'1  175  0  ~/stencil.c
+'2  99  0  ~/stencil.c
+'3  176  0  ~/stencil.c
+'4  78  23  ~/stencil.c
+'5  9  85  ~/stencil.c
+'6  17  58  ~/stencil.c
+'7  2  23  ~/Makefile
+'8  12  0  ~/.bashrc
+'9  33  4  ~/stencil.c
 
 # Jumplist (newest first):
--'  99  0  ~/stencil.c
+-'  174  36  ~/stencil.c
+-'  175  0  ~/stencil.c
+-'  99  2  ~/stencil.c
 -'  1  0  ~/stencil.c
 -'  176  0  ~/stencil.c
 -'  78  23  ~/stencil.c
@@ -188,17 +190,13 @@
 -'  12  0  ~/.bashrc
 -'  12  0  ~/.bashrc
 -'  2  23  ~/Makefile
--'  12  0  ~/.bashrc
--'  2  23  ~/Makefile
--'  80  0  ~/stencil.c
 
 # History of marks within files (newest to oldest):
 
 > ~/stencil.c
-	"	99	0
-	^	78	24
-	.	76	9
-	+	83	32
+	"	174	36
+	^	174	37
+	.	174	36
 	+	83	33
 	+	84	40
 	+	85	26
@@ -298,6 +296,7 @@
 	+	75	45
 	+	77	0
 	+	76	9
+	+	174	36
 
 > ~/Makefile
 	"	2	1
