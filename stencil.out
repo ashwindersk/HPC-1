@@ -1,7 +1,7 @@
-Running on host node31-031
-Time is Thu Oct 11 12:52:42 BST 2018
+Running on host node31-029
+Time is Wed Oct 17 13:31:01 BST 2018
 Directory is /panfs/panasas01/cosc/ak16625
-PBS job ID is 7510160.master.cm.cluster
+PBS job ID is 7547266.master.cm.cluster
 ------------------------------------
- runtime: 6.077332 s
+ runtime: 0.236528 s
 ------------------------------------
