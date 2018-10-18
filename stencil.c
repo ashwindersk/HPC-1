@@ -7,9 +7,9 @@
 
 //This is averaging 0.3 seconds at home 
 
-void stencil(const int nx, const int ny, float * image, float * tmp_image);
-void init_image(const int nx, const int ny, float * image, float * tmp_image);
-void output_image(const char * file_name, const int nx, const int ny, float *image);
+void stencil(const int nx, const int ny, double * image, double * tmp_image);
+void init_image(const int nx, const int ny, double * image, double * tmp_image);
+void output_image(const char * file_name, const int nx, const int ny, double *image);
 double wtime(void);
 int main(int argc, char *argv[]) {
 
@@ -32,9 +32,9 @@ int main(int argc, char *argv[]) {
 
 
 // double *tmp_image = malloc(sizeof(double)*nx*ny);
- float *image = malloc(sizeof(float)*ny*nx);
+ double *image = malloc(sizeof(double)*ny*nx);
 
- float *tmp_image = malloc(sizeof(float)*ny*nx);
+ double *tmp_image = malloc(sizeof(double)*ny*nx);
 
 
 
@@ -61,7 +61,7 @@ int main(int argc, char *argv[]) {
   free(image);
 }
 
-void stencil(const int nx, const int ny,  float *restrict image, float *restrict tmp_image) {
+void stencil(const int nx, const int ny,  double *restrict image, double *restrict tmp_image) {
 
 
   //manually amending the values of the corners
@@ -105,7 +105,7 @@ void stencil(const int nx, const int ny,  float *restrict image, float *restrict
  }
 
 // Create the input image
-void init_image(const int nx, const int ny, float * image, float * tmp_image) {
+void init_image(const int nx, const int ny, double * image, double * tmp_image) {
   // Zero everything
   for (int j = 0; j < ny; ++j) {
     for (int i = 0; i < nx; ++i) {
@@ -131,7 +131,7 @@ void init_image(const int nx, const int ny, float * image, float * tmp_image) {
 }
 
 // Routine to output the image in Netpbm grayscale binary image format
-void output_image(const char * file_name, const int nx, const int ny, float *image) {
+void output_image(const char * file_name, const int nx, const int ny, double *image) {
 
   // Open output file
   FILE *fp = fopen(file_name, "w");
