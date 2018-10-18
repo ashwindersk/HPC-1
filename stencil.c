@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
 
 
 // float *tmp_image = malloc(sizeof(double)*nx*ny);
- float *image = malloc(sizeof(float)*ny*nx);
+ float *image = malloc(sizeof(float)*ny*nx;
 
  float *tmp_image = malloc(sizeof(float)*ny*nx);
 
@@ -102,13 +102,26 @@ void stencil(const int nx, const int ny,  float *restrict image, float *restrict
    tmp_image[j + ny*(nx-1)] = 0.6*image[j+ ny*(nx-1)] + 0.1*image[(j-1)+ ny*(nx-1)] + 0.1*image[(j+1)+ ny*(nx-1)] + 0.1*image[j+ ny*(nx-2)];
   }
 
+
+// for(int i = 1 ; i<ny; ++i){
+//    for(int j = 1 ; j<nx; ++j){
+//      int base = j+ny*i;  
+//      tmp_image[base] = image[base-1]*0.1   + image[base]*0.3 + image[base+1]*0.1;
+//      tmp_image[base] += image[base -ny]*0.1 + image[base]*0.3 + image[base +ny]*0.1;
+//    }
+//   }
+
+
+
+
+
  }
 
 // Create the input image
 void init_image(const int nx, const int ny, float * image, float * tmp_image) {
   // Zero everything
-  for (int j = 0; j < ny; ++j) {
-    for (int i = 0; i < nx; ++i) {
+  for (int j = 0; j < ny+2; ++j) {
+    for (int i = 0; i < nx+2; ++i) {
      // image[j+i*ny] = 0.0;
      // tmp_image[j+i*ny] = 0.0;
      image[j+ny*i] = 0.0;
@@ -117,6 +130,7 @@ void init_image(const int nx, const int ny, float * image, float * tmp_image) {
   }
 
   // Checkerboard
+   
   for (int i = 0; i < 8; ++i) {
     for (int j = 0; j < 8; ++j) {
       for (int ii = i*ny/8; ii < (i+1)*ny/8; ++ii) {
