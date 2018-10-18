@@ -86,8 +86,7 @@ void stencil(const int nx, const int ny,  float *restrict image, float *restrict
    for(int j = 1 ; j<nx-1; ++j){
      int base = j+ny*i;
      #pragma omp simd 
-     tmp_image[base] = image[base-1]*0.1   + image[base]*0.3 + image[base+1]*0.1;
-     tmp_image[base] += image[base -ny]*0.1 + image[base]*0.3 + image[base +ny]*0.1;
+     tmp_image[base] = image[base-1]*0.1   + image[base]*0.6 + image[base+1]*0.1 + image[base -ny]*0.1 + image[base +ny]*0.1;
    }
   }
   //last column
