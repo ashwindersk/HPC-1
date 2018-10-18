@@ -119,8 +119,8 @@ void stencil(const int nx, const int ny,  float *restrict image, float *restrict
 // Create the input image
 void init_image(const int nx, const int ny, float * image, float * tmp_image) {
   // Zero everything
-  for (int j = 0; j < ny+2; ++j) {
-    for (int i = 0; i < nx+2; ++i) {
+  for (int j = 0; j < ny; ++j) {
+    for (int i = 0; i < nx; ++i) {
      // image[j+i*ny] = 0.0;
      // tmp_image[j+i*ny] = 0.0;
      image[j+ny*i] = 0.0;
