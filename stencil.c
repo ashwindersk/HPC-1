@@ -7,11 +7,10 @@
 
 //This is averaging 0.3 seconds at home 
 
-void stencil(const int nx, const int ny, double *  image, double *  tmp_image);
-void init_image(const int nx, const int ny, double *  image, double *  tmp_image);
-void output_image(const char * file_name, const int nx, const int ny, double *image);
+void stencil(const int nx, const int ny, float * image, float * tmp_image);
+void init_image(const int nx, const int ny, float * image, float * tmp_image);
+void output_image(const char * file_name, const int nx, const int ny, float *image);
 double wtime(void);
-
 int main(int argc, char *argv[]) {
 
   // Check usage
@@ -27,15 +26,15 @@ int main(int argc, char *argv[]) {
   int niters = atoi(argv[3]);
 
   // Allocate the image
- // double *image = malloc(sizeof(double)*nx*ny);
+ // float *image = malloc(sizeof(double)*nx*ny);
 
 
 
 
-// double *tmp_image = malloc(sizeof(double)*nx*ny);
- double *image = malloc(sizeof(double)*ny*nx);
+// float *tmp_image = malloc(sizeof(double)*nx*ny);
+ float *image =_mm_malloc(sizeof(float)*ny*nx,64);
 
- double *tmp_image = malloc(sizeof(double)*ny*nx);
+ float *tmp_image = _mm_malloc(sizeof(float)*ny*nx,64);
 
 
 
@@ -62,51 +61,65 @@ int main(int argc, char *argv[]) {
   free(image);
 }
 
-void stencil(const int nx, const int ny,  double * restrict image, double * restrict tmp_image) {
+void stencil(const int nx, const int ny,  float *restrict image, float *restrict tmp_image) {
 
 
   //manually amending the values of the corners
- tmp_image[0]                   = 0.6 * image[0]                  + 0.1*image[1 + ny*0]                  + 0.1*image[0 + ny*1];
- tmp_image[nx-1 + ny*0]         = 0.6 * image[nx-1 + ny*0]        + 0.1*image[nx-2 + ny*0]               + 0.1*image[nx-1 + ny*1];
- tmp_image[0 + ny*(nx-1)]       = 0.6 * image[0 + ny*(ny-1)]      + 0.1*image[0 +ny*(ny-2)]              + 0.1*image[(1 + ny*(ny-1))];
- tmp_image[nx-1 + (ny)*(ny-1)]  = 0.6 * image[nx-1 + (ny)*(ny-1)] + 0.1*image[nx-1 + (ny)*(nx-2)]        + 0.1*image[nx-2 +(nx-1)*(ny)];
+ tmp_image[0]                   = 0.6f * image[0]                  + 0.1f*image[1 + ny*0]                  + 0.1f*image[0 + ny*1];
+ tmp_image[nx-1 + ny*0]         = 0.6f * image[nx-1 + ny*0]        + 0.1f*image[nx-2 + ny*0]               + 0.1f*image[nx-1 + ny*1];
+ tmp_image[0 + ny*(nx-1)]       = 0.6f * image[0 + ny*(ny-1)]      + 0.1f*image[0 +ny*(ny-2)]              + 0.1f*image[(1 + ny*(ny-1))];
+ tmp_image[nx-1 + (ny)*(ny-1)]  = 0.6f * image[nx-1 + (ny)*(ny-1)] + 0.1f*image[nx-1 + (ny)*(nx-2)]        + 0.1f*image[nx-2 +(nx-1)*(ny)];
 
 
   //top row
   for(int j = 1; j<nx-1; ++j){
-    tmp_image[j+ny*0] = 0.1*image[j-1 + ny*0] + 0.6*image[j+ny*0]  + 0.1*image[j+1 + ny*0] + 0.1*image[j+ny*1];
+    tmp_image[j+ny*0] = 0.1f*image[j-1 + ny*0] + 0.6f*image[j+ny*0]  + 0.1f*image[j+1 + ny*0] + 0.1f*image[j+ny*1];
   }
 
   //first column
   for(int i = 1; i< ny-1 ; ++i){
-   tmp_image[0+ny*i] = 0.6*image[0+ny*i] + 0.1*image[1+ ny*i] + 0.1*image[0+ny*(i-1)] + 0.1*image[0 + ny*(i+1)];
+   tmp_image[0+ny*i] = 0.6f*image[0+ny*i] + 0.1f*image[1+ ny*i] + 0.1f*image[0+ny*(i-1)] + 0.1f*image[0 + ny*(i+1)];
   }
 
-  //editing the values of the (ny-1)*(nx-1) pixels
+  //editing the values of the (ny-1)*(nx-1) pisxels
   for(int i = 1 ; i<ny-1; ++i){
    for(int j = 1 ; j<nx-1; ++j){
-     tmp_image[j+ny*i] = image[j+ny*i] * 0.6
-                       + image[j+1 + ny*i] *0.1
-                       + image[j+ny*(i-1)] *0.1
-                       + image[j-1+ ny*i]  *0.1
-                       + image[j+ny*(i+1)] *0.1;
+     int base = j+ny*i;
+     __assume_aligned(image,64);
+     __assume_aligned(tmp_image,64);
+     #pragma omp simd
+     tmp_image[base] = image[base-1]*0.1f   + image[base]*0.6f + image[base+1]*0.1f + image[base -ny]*0.1f + image[base +ny]*0.1f;
    }
   }
   //last column
   for(int i = 1; i< ny-1 ; ++i){
-    tmp_image[(nx-1)+ny*i] = 0.6*image[(nx-1)+ny*i] + 0.1*image[(nx-2)+ ny*i] + 0.1*image[(nx-1)+ny*(i-1)] + 0.1*image[(nx-1) + ny*(i+1)];
+    int base  = nx-1 + ny*i;
+    tmp_image[base] = 0.6f*image[base] + 0.1f*image[base-1] + 0.1f*image[base -ny] + 0.1f*image[base + ny];
   }
 
 
   //last row
   for(int j = 1; j<nx-1; ++j){
-   tmp_image[j + (ny)*(nx-1)] = 0.6*image[j+ (ny)*(nx-1)] + 0.1*image[(j-1)+ (ny)*(nx-1)] + 0.1*image[(j+1)+ (ny)*(nx-1)] + 0.1*image[j+ ny*(nx-2)];
+   tmp_image[j + ny*(nx-1)] = 0.6f*image[j+ ny*(nx-1)] + 0.1f*image[(j-1)+ ny*(nx-1)] + 0.1f*image[(j+1)+ ny*(nx-1)] + 0.1f*image[j+ ny*(nx-2)];
   }
+
+
+// for(int i = 1 ; i<ny; ++i){
+//    for(int j = 1 ; j<nx; ++j){
+//      int base = j+ny*i;  
+//      tmp_image[base] = image[base-1]*0.1f   + image[base]*0.3 + image[base+1]*0.1f;
+//      tmp_image[base] += image[base -ny]*0.1f + image[base]*0.3 + image[base +ny]*0.1f;
+//    }
+//   }
+
+
+
+
 
  }
 
 // Create the input image
-void init_image(const int nx, const int ny, double *  image, double *  tmp_image) {
+void init_image(const int nx, const int ny, float * image, float * tmp_image) {
   // Zero everything
   for (int j = 0; j < ny; ++j) {
     for (int i = 0; i < nx; ++i) {
@@ -118,6 +131,7 @@ void init_image(const int nx, const int ny, double *  image, double *  tmp_image
   }
 
   // Checkerboard
+   
   for (int i = 0; i < 8; ++i) {
     for (int j = 0; j < 8; ++j) {
       for (int ii = i*ny/8; ii < (i+1)*ny/8; ++ii) {
@@ -132,7 +146,7 @@ void init_image(const int nx, const int ny, double *  image, double *  tmp_image
 }
 
 // Routine to output the image in Netpbm grayscale binary image format
-void output_image(const char * file_name, const int nx, const int ny, double *image) {
+void output_image(const char * file_name, const int nx, const int ny, float *image) {
 
   // Open output file
   FILE *fp = fopen(file_name, "w");
@@ -159,7 +173,7 @@ void output_image(const char * file_name, const int nx, const int ny, double *im
   // Output image, converting to numbers 0-255
   for (int i = 0; i < ny; ++i) {
     for (int j = 0; j < nx; ++j) {
-     // fputc((char)(255.0*image[j+ny*i]/maximum), fp);
+      //fputc((char)(255.0*image[j+ny*i]/maximum), fp);
      	fputc((char)(255.0*image[j+ny*i]/maximum),fp);
     }
   }

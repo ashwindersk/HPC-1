@@ -11,6 +11,7 @@
 ~Msle0~/\<include\>
 
 # Command Line History (newest to oldest):
+:set number
 :quit
 
 # Search String History (newest to oldest):
@@ -78,42 +79,64 @@
 "u	CHAR	0
 	it€kb€kb€kbqi€kb€kb
 ""-	CHAR	0
-		
+	t
 
 # File marks:
-'0  174  36  ~/stencil.c
-'1  175  0  ~/stencil.c
-'2  99  0  ~/stencil.c
-'3  176  0  ~/stencil.c
-'4  78  23  ~/stencil.c
-'5  9  85  ~/stencil.c
-'6  17  58  ~/stencil.c
-'7  2  23  ~/Makefile
-'8  12  0  ~/.bashrc
-'9  33  4  ~/stencil.c
+'0  49  0  ~/stencil.out
+'1  90  20  ~/stencil.c
+'2  89  35  ~/stencil.c
+'3  37  23  ~/stencil.c
+'4  79  1  ~/stencil.c
+'5  2  38  ~/Makefile
+'6  7  0  ~/stencil.out
+'7  17  18  ~/stencil.job
+'8  1  0  ~/stencil.out
+'9  35  42  ~/stencil.c
 
 # Jumplist (newest first):
--'  174  36  ~/stencil.c
--'  175  0  ~/stencil.c
--'  99  2  ~/stencil.c
+-'  49  0  ~/stencil.out
+-'  90  20  ~/stencil.c
+-'  89  5  ~/stencil.c
+-'  7  0  ~/stencil.out
+-'  37  1  ~/stencil.c
+-'  79  2  ~/stencil.c
+-'  2  38  ~/Makefile
+-'  17  18  ~/stencil.job
+-'  18  0  ~/stencil.job
+-'  1  0  ~/stencil.out
+-'  35  42  ~/stencil.c
+-'  96  4  ~/stencil.c
+-'  178  0  ~/stencil.c
+-'  93  3  ~/stencil.c
+-'  92  3  ~/stencil.c
+-'  1  0  ~/makefile
+-'  179  0  ~/stencil.c
+-'  13  10  ~/.bashrc
+-'  12  0  ~/.bashrc
 -'  1  0  ~/stencil.c
--'  176  0  ~/stencil.c
+-'  178  0  ~/stencilbase.c
+-'  87  5  ~/stencilbase.c
+-'  1  0  ~/stencil.job
+-'  1  0  ~/stencilbase.c
+-'  176  2  ~/stencil.c
+-'  101  2  ~/stencil.c
+-'  175  2  ~/stencil.c
+-'  100  2  ~/stencil.c
+-'  177  0  ~/stencil.c
 -'  78  23  ~/stencil.c
 -'  9  0  ~/stencil.c
 -'  17  4  ~/stencil.c
--'  2  23  ~/Makefile
--'  12  0  ~/.bashrc
 -'  33  0  ~/stencil.c
 -'  49  4  ~/stencil.c
 -'  1  0  ~/Makefil
--'  115  5  ~/stencil.c
+-'  116  5  ~/stencil.c
 -'  11  0  ~/.bashrc
 -'  1  0  ~/bashrc
--'  102  3  ~/stencil.c
--'  98  0  ~/stencil.c
+-'  103  3  ~/stencil.c
+-'  99  0  ~/stencil.c
 -'  3  1  ~/stencil.c
 -'  2  1  ~/stencil.c
--'  134  0  ~/stencil.c
+-'  135  0  ~/stencil.c
 -'  21  2  ~/stencil.c
 -'  1  0  ~/make
 -'  44  2  ~/stencil.c
@@ -122,19 +145,16 @@
 -'  27  2  ~/stencil.c
 -'  42  1  ~/stencil.c
 -'  38  8  ~/stencil.c
--'  101  4  ~/stencil.c
--'  146  5  ~/stencil.c
--'  125  0  ~/stencil.c
--'  195  6  ~/stencil.c
--'  190  0  ~/stencil.c
--'  114  4  ~/stencil.c
+-'  102  4  ~/stencil.c
+-'  147  5  ~/stencil.c
+-'  126  0  ~/stencil.c
+-'  196  6  ~/stencil.c
+-'  191  0  ~/stencil.c
+-'  115  4  ~/stencil.c
 -'  83  4  ~/stencil.c
--'  92  27  ~/stencil.c
--'  104  2  ~/stencil.c
--'  89  6  ~/stencil.c
+-'  105  2  ~/stencil.c
 -'  55  2  ~/stencil.c
 -'  81  52  ~/stencil.c
--'  79  2  ~/stencil.c
 -'  73  18  ~/stencil.c
 -'  72  26  ~/stencil.c
 -'  10  0  ~/.bashrc
@@ -142,18 +162,17 @@
 -'  1  0  ~/.bashsrc
 -'  1  0  ~/stenil.c
 -'  12  0  ~/stencil.c
--'  118  0  ~/stencil.c
--'  94  2  ~/stencil.c
+-'  119  0  ~/stencil.c
+-'  95  2  ~/stencil.c
 -'  10  0  ~/stencil.c
 -'  11  0  ~/stencil.c
 -'  75  103  ~/stencil.c
 -'  74  4  ~/stencil.c
 -'  1  0  ~/Makfile
--'  119  2  ~/stencil.c
--'  91  0  ~/stencil.c
+-'  120  2  ~/stencil.c
 -'  1  0  ~/.bashrc
 -'  1  0  ~/Makefile
--'  93  0  ~/stencil.c
+-'  94  0  ~/stencil.c
 -'  1  0  ~/Makfile
 -'  1  0  ~/Makfile
 -'  1  0  ~/Makfile
@@ -172,75 +191,28 @@
 -'  1  0  ~/Makfile
 -'  1  0  ~/Makfile
 -'  1  0  ~/.bash
--'  1  0  ~/.bashsrc
--'  1  0  ~/stenil.c
--'  1  0  ~/Makfile
--'  1  0  ~/Makfile
--'  1  0  ~/Makfile
--'  1  0  ~/Makfile
--'  1  0  ~/.bash
--'  1  0  ~/make
--'  172  0  ~/stencil.c
--'  130  0  ~/stencil.c
--'  1  0  ~/bashrc
--'  13  0  ~/.bashrc
--'  1  0  ~/Makefil
--'  12  0  ~/.bashrc
--'  1  0  ~/Makefil
--'  12  0  ~/.bashrc
--'  12  0  ~/.bashrc
--'  2  23  ~/Makefile
 
 # History of marks within files (newest to oldest):
 
+> ~/stencil.out
+	"	49	0
+
 > ~/stencil.c
-	"	174	36
-	^	174	37
-	.	174	36
-	+	83	33
-	+	84	40
-	+	85	26
-	+	85	26
-	+	86	16
-	+	85	19
-	+	86	22
-	+	85	18
-	+	86	27
-	+	87	41
-	+	88	27
-	+	95	0
-	+	97	0
-	+	95	5
-	+	96	0
-	+	95	2
-	+	101	2
-	+	106	3
-	+	101	94
-	+	106	4
-	+	106	115
-	+	107	14
-	+	106	17
-	+	107	97
-	+	114	5
-	+	139	70
-	+	165	77
-	+	156	36
-	+	157	36
-	+	183	6
-	+	184	34
-	+	185	32
-	+	186	5
+	"	90	20
+	^	90	21
+	.	90	21
 	+	187	5
-	+	186	30
+	+	188	5
+	+	187	30
 	+	8	49
 	+	9	70
 	+	10	77
-	+	194	55
-	+	195	49
-	+	143	6
-	+	144	32
-	+	146	8
-	+	101	50
+	+	195	55
+	+	196	49
+	+	144	6
+	+	145	32
+	+	147	8
+	+	102	50
 	+	38	70
 	+	42	73
 	+	38	27
@@ -272,17 +244,17 @@
 	+	24	13
 	+	25	12
 	+	21	11
-	+	133	29
-	+	134	31
+	+	134	29
+	+	135	31
 	+	85	109
-	+	102	2
+	+	103	2
 	+	76	70
 	+	77	46
 	+	79	68
 	+	79	48
 	+	80	0
-	+	102	149
-	+	102	2
+	+	103	149
+	+	103	2
 	+	32	0
 	+	49	0
 	+	17	58
@@ -296,12 +268,44 @@
 	+	75	45
 	+	77	0
 	+	76	9
-	+	174	36
+	+	175	36
+	+	92	20
+	+	91	3
+	+	92	3
+	+	91	28
+	+	91	0
+	+	93	230
+	+	93	170
+	+	93	144
+	+	93	80
+	+	93	119
+	+	93	208
+	+	93	189
+	+	93	161
+	+	93	77
+	+	93	122
+	+	93	79
+	+	93	86
+	+	92	18
+	+	93	35
+	+	90	21
+	+	12	74
+	+	136	75
+	+	35	6
+	+	37	38
+	+	35	48
+	+	37	48
+	+	35	19
+	+	37	24
+	+	90	22
+	+	88	29
+	+	89	35
+	+	90	21
 
 > ~/Makefile
-	"	2	1
-	^	2	2
-	.	2	1
+	"	2	38
+	^	2	39
+	.	2	38
 	+	2	15
 	+	1	18
 	+	2	16
@@ -320,12 +324,21 @@
 	+	1	0
 	+	2	27
 	+	1	9
-	+	2	1
+	+	2	38
+
+> ~/stencil.job
+	"	17	18
+	^	17	19
+	.	17	19
+	+	17	19
+
+> ~/makefile
+	"	1	0
 
 > ~/.bashrc
-	"	12	40
-	^	12	41
-	.	12	11
+	"	13	10
+	^	13	11
+	.	13	10
 	+	10	27
 	+	11	33
 	+	12	10
@@ -334,7 +347,12 @@
 	+	12	54
 	+	12	41
 	+	12	41
-	+	12	11
+	+	12	41
+	+	12	41
+	+	13	10
+
+> ~/stencilbase.c
+	"	178	0
 
 > ~/Makefil
 	"	1	0

@@ -1,7 +1,49 @@
-Running on host node31-031
-Time is Wed Oct 17 14:25:46 BST 2018
+Running on host node31-030
+Time is Mon Oct 22 23:47:02 BST 2018
 Directory is /panfs/panasas01/cosc/ak16625
-PBS job ID is 7547461.master.cm.cluster
+PBS job ID is 7583044.master.cm.cluster
+*** glibc detected *** ./stencil: double free or corruption (out): 0x00002aaaab90e040 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x75e66)[0x2aaaab3e9e66]
+/lib64/libc.so.6(+0x789b3)[0x2aaaab3ec9b3]
+./stencil[0x40167e]
+/lib64/libc.so.6(__libc_start_main+0xfd)[0x2aaaab392d5d]
+./stencil[0x400d79]
+======= Memory map: ========
+00400000-00406000 r-xp 00000000 00:14 4255373912                         /panfs/panasas01/cosc/ak16625/stencil
+00605000-00606000 rw-p 00005000 00:14 4255373912                         /panfs/panasas01/cosc/ak16625/stencil
+00606000-0062c000 rw-p 00000000 00:00 0                                  [heap]
+2aaaaaaab000-2aaaaaacb000 r-xp 00000000 08:01 817743                     /lib64/ld-2.12.so
+2aaaaaacb000-2aaaaaacc000 r-xp 00000000 00:00 0                          [vdso]
+2aaaaaacc000-2aaaaaace000 rw-p 00000000 00:00 0 
+2aaaaacca000-2aaaaaccb000 r--p 0001f000 08:01 817743                     /lib64/ld-2.12.so
+2aaaaaccb000-2aaaaaccc000 rw-p 00020000 08:01 817743                     /lib64/ld-2.12.so
+2aaaaaccc000-2aaaaaccd000 rw-p 00000000 00:00 0 
+2aaaaaccd000-2aaaaad50000 r-xp 00000000 08:01 817808                     /lib64/libm-2.12.so
+2aaaaad50000-2aaaaaf4f000 ---p 00083000 08:01 817808                     /lib64/libm-2.12.so
+2aaaaaf4f000-2aaaaaf50000 r--p 00082000 08:01 817808                     /lib64/libm-2.12.so
+2aaaaaf50000-2aaaaaf51000 rw-p 00083000 08:01 817808                     /lib64/libm-2.12.so
+2aaaaaf51000-2aaaaaf5b000 r-xp 00000000 00:13 17999932                   /cm/shared/languages/Intel-Compiler-XE-16-U2/compilers_and_libraries_2016.2.181/linux/compiler/lib/intel64_lin/libiompstubs5.so
+2aaaaaf5b000-2aaaab15b000 ---p 0000a000 00:13 17999932                   /cm/shared/languages/Intel-Compiler-XE-16-U2/compilers_and_libraries_2016.2.181/linux/compiler/lib/intel64_lin/libiompstubs5.so
+2aaaab15b000-2aaaab15c000 r--p 0000a000 00:13 17999932                   /cm/shared/languages/Intel-Compiler-XE-16-U2/compilers_and_libraries_2016.2.181/linux/compiler/lib/intel64_lin/libiompstubs5.so
+2aaaab15c000-2aaaab15d000 rw-p 0000b000 00:13 17999932                   /cm/shared/languages/Intel-Compiler-XE-16-U2/compilers_and_libraries_2016.2.181/linux/compiler/lib/intel64_lin/libiompstubs5.so
+2aaaab15d000-2aaaab15e000 rw-p 00000000 00:00 0 
+2aaaab15e000-2aaaab173000 r-xp 00000000 00:13 16640044                   /cm/shared/languages/GCC-4.8.4/lib64/libgcc_s.so.1
+2aaaab173000-2aaaab373000 ---p 00015000 00:13 16640044                   /cm/shared/languages/GCC-4.8.4/lib64/libgcc_s.so.1
+2aaaab373000-2aaaab374000 rw-p 00015000 00:13 16640044                   /cm/shared/languages/GCC-4.8.4/lib64/libgcc_s.so.1
+2aaaab374000-2aaaab4fe000 r-xp 00000000 08:01 817756                     /lib64/libc-2.12.so
+2aaaab4fe000-2aaaab6fe000 ---p 0018a000 08:01 817756                     /lib64/libc-2.12.so
+2aaaab6fe000-2aaaab702000 r--p 0018a000 08:01 817756                     /lib64/libc-2.12.so
+2aaaab702000-2aaaab703000 rw-p 0018e000 08:01 817756                     /lib64/libc-2.12.so
+2aaaab703000-2aaaab708000 rw-p 00000000 00:00 0 
+2aaaab708000-2aaaab70a000 r-xp 00000000 08:01 817770                     /lib64/libdl-2.12.so
+2aaaab70a000-2aaaab90a000 ---p 00002000 08:01 817770                     /lib64/libdl-2.12.so
+2aaaab90a000-2aaaab90b000 r--p 00002000 08:01 817770                     /lib64/libdl-2.12.so
+2aaaab90b000-2aaaab90c000 rw-p 00003000 08:01 817770                     /lib64/libdl-2.12.so
+2aaaab90c000-2aaaac112000 rw-p 00000000 00:00 0 
+7ffffffe8000-7ffffffff000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
 ------------------------------------
- runtime: 0.233491 s
+ runtime: 0.103318 s
 ------------------------------------
+/cm/local/apps/torque/4.2.4.1/spool/mom_priv/jobs/7583044.master.cm.cluster.SC: line 17: 122308 Aborted                 ./stencil 1024 1024 100

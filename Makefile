@@ -1,5 +1,5 @@
 stencil: stencil.c
-	gcc -std=c99 -g -pg -Ofast -Wall $^ -o $@
+	icc -std=c99 -qopenmp-stubs -Qparallel -g -pg -Ofast -Wall $^ -o $@
 
 
 
