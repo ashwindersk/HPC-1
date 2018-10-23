@@ -32,9 +32,9 @@ int main(int argc, char *argv[]) {
 
 
 // float *tmp_image = malloc(sizeof(double)*nx*ny);
- float *image = malloc(sizeof(float)*ny*nx);
+ float *image =_mm_malloc(sizeof(float)*ny*nx,64);
 
- float *tmp_image = malloc(sizeof(float)*ny*nx);
+ float *tmp_image = _mm_malloc(sizeof(float)*ny*nx,64);
 
 
 
@@ -85,7 +85,9 @@ void stencil(const int nx, const int ny,  float *restrict image, float *restrict
   for(int i = 1 ; i<ny-1; ++i){
    for(int j = 1 ; j<nx-1; ++j){
      int base = j+ny*i;
-     #pragma omp simd 
+     __assume_aligned(image,64);
+     __assume_aligned(tmp_image,64);
+     #pragma omp simd
      tmp_image[base] = image[base-1]*0.1f   + image[base]*0.6f + image[base+1]*0.1f + image[base -ny]*0.1f + image[base +ny]*0.1f;
    }
   }

@@ -1,110 +1,3 @@
-gcc -03 -fopenmp -pg -g -o stencil.gprof stencil.c
-gcc -std=c99 -fopenmp -pg -g -o stencil.gprof stencil.c
-qsub ./stencil.gprof
-ls
-qsub stencil.gprof
-vim Makefile
-make stencil
-rm stencil
-make stencil
-qsub stencil.job
-qstat
-qstat teaching 
-gprof -l stencil gmon.out
-logout
-#1539257594
-module list
-#1539257611
-module av
-#1539257624
-vim .bashrc
-#1539257733
-. .bashrc
-#1539257740
-module list
-#1539257804
-logout
-ls
-vim stencil.c
-rm stencil
-rm stencil.gprof
-make
-qsub stencil.job
-qstat teaching
-ls
-gprof -l stencil gmon.out
-./stencil 1024 1024 100
-vim stencil.c
-make
-./stencil 1024 1024 100
-vim stencil.c
-ls
-rm stencil
-make
-./stencil 1024 1024 100
-ls
-rm stencil
-qsub stencil.job
-ls
-make
-./stencil 1024 1024 100
-make
-rm s
-rm stencil
-ls
-make -B 
-qsub stencil.job
-qstat teaching 
-./stencil 1024 1024 100
-vim stencil.c
-make -B 
-vim Makefile
-make -B 
-ls
-rm stencil
-make -B 
-vim Makefile
-make -B 
-vim Makfile
-#1539259105
-ls
-#1539259109
- vim Makefile
-#1539259146
-make -B 
-#1539259151
-./stencil 1024 1024 100
-#1539259172
-vim stencil.c
-ls
-vim stencil.c
-git init
-git add .
-git commit -m "First commit"
-git remore add origin Nomura
-Standard Charted
-BNPP
-UBS
-git remote add origin Nomura
-Standard Charted
-BNPP
-UBS
-git remote add origin https://github.com/ashwindersk/HPC-1.git
-git remote -v
-git remove rm
-git remote rm
-git remote -v
-git remote rm origin
-git remote -v
-git remote add origin https://github.com/ashwindersk/HPC-1.githttps://github.com/ashwindersk/HPC-1.git
-git remote -v
-git push -u origin master 
-git remote rm origin
-git remote add origin https://github.com/ashwindersk/HPC-1.git
-git push -u origin master
-logout
-ls
-git pull
 ls
 module load languages/python-2.7.6
 python check.py --ref-stencil-file stencil_1024_1024_100.pgm --stencil-file stencil.pgm
@@ -1231,3 +1124,103 @@ qstat teaching
 vim stencil.c
 loggout
 logout
+git fetch
+git pull
+git checkout bigger-array-size
+git commit
+ls
+vim stencil.c
+git pull
+git fetch
+git checkout bigger-array-size
+rm stencil
+git checkout bigger-array-size
+rm stencil.out
+rm .viminfo
+rm .bash_history
+rm gmon.out
+git checkout bigger-array-size
+git pull
+vim stencil.c
+make
+vim stencil.c
+make
+qsub stencil.job
+qstat teaching 
+vim stencil.out
+logout
+make
+got pill
+git pull
+rm stencil.c
+git pull
+make
+vim stencil.c
+make
+qsub stencil.job
+qstat teaching
+vim stencil.out
+logout
+rm stencil.c
+git pull
+make
+qsub stencil.job
+vim stencil.out
+git commit -m "row and column seperation in main loop"
+python check.py --ref-stencil-file stencil_1024_1024_100.pgm --stencil-file stencil.pgm
+vim stencil.out
+vim stencil.job
+make
+rm stencil
+make
+qsub stencil.job
+vim stencil.out
+vim stencil.job
+make
+rm stencil
+make
+qsub stencil.job
+qstat teaching
+vim stencil.out
+vim stencil.job
+qsub stencil.job
+qstat teaching
+vim stencil.out
+vim Makefile
+rm stencil
+maek
+make
+vim Makefile
+make
+rm stencil
+make
+vim Makefile
+make
+rm stencil
+make
+vim stencil.c
+rm stencil
+make
+vim stencil.c
+make
+vim stencil.c
+rm stencil
+make
+qsub stencil.job
+qstat teaching
+vim stencil.out
+python check.py --ref-stencil-file stencil_1024_1024_100.pgm --stencil-file stencil.pgm
+vim stencil.c
+rm stencil
+make
+qsub stencil.job
+qstat teaching
+vim stencil.out
+#1540289879
+ls
+#1540289908
+mkdir report
+#1540289909
+ls
+#1540289913
+cd report
