@@ -25,20 +25,10 @@ int main(int argc, char *argv[]) {
   int ny = atoi(argv[2]);
   int niters = atoi(argv[3]);
 
-  // Allocate the image
- // float *image = malloc(sizeof(double)*nx*ny);
+  // Allocate the images
+  float *image =_mm_malloc(sizeof(float)*ny*nx,64);
 
-
-
-
-// float *tmp_image = malloc(sizeof(double)*nx*ny);
- float *image =_mm_malloc(sizeof(float)*ny*nx,64);
-
- float *tmp_image = _mm_malloc(sizeof(float)*ny*nx,64);
-
-
-
-
+  float *tmp_image = _mm_malloc(sizeof(float)*ny*nx,64);
 
   // Set the input image
   init_image(nx, ny, image, tmp_image);
@@ -88,6 +78,7 @@ void stencil(const int nx, const int ny,  float *restrict image, float *restrict
      __assume_aligned(image,64);
      __assume_aligned(tmp_image,64);
      #pragma omp simd
+     
      tmp_image[base] = image[base-1]*0.1f   + image[base]*0.6f + image[base+1]*0.1f + image[base -ny]*0.1f + image[base +ny]*0.1f;
    }
   }
@@ -103,19 +94,6 @@ void stencil(const int nx, const int ny,  float *restrict image, float *restrict
    tmp_image[j + ny*(nx-1)] = 0.6f*image[j+ ny*(nx-1)] + 0.1f*image[(j-1)+ ny*(nx-1)] + 0.1f*image[(j+1)+ ny*(nx-1)] + 0.1f*image[j+ ny*(nx-2)];
   }
 
-
-// for(int i = 1 ; i<ny; ++i){
-//    for(int j = 1 ; j<nx; ++j){
-//      int base = j+ny*i;  
-//      tmp_image[base] = image[base-1]*0.1f   + image[base]*0.3 + image[base+1]*0.1f;
-//      tmp_image[base] += image[base -ny]*0.1f + image[base]*0.3 + image[base +ny]*0.1f;
-//    }
-//   }
-
-
-
-
-
  }
 
 // Create the input image
@@ -123,8 +101,7 @@ void init_image(const int nx, const int ny, float * image, float * tmp_image) {
   // Zero everything
   for (int j = 0; j < ny; ++j) {
     for (int i = 0; i < nx; ++i) {
-     // image[j+i*ny] = 0.0;
-     // tmp_image[j+i*ny] = 0.0;
+     
      image[j+ny*i] = 0.0;
      tmp_image[j+ny*i] = 0.0;
     }

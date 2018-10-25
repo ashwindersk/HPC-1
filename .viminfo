@@ -79,233 +79,152 @@
 "u	CHAR	0
 	it€kb€kb€kbqi€kb€kb
 ""-	CHAR	0
-	t
+	T
 
 # File marks:
-'0  49  0  ~/stencil.out
-'1  90  20  ~/stencil.c
-'2  89  35  ~/stencil.c
-'3  37  23  ~/stencil.c
-'4  79  1  ~/stencil.c
-'5  2  38  ~/Makefile
-'6  7  0  ~/stencil.out
-'7  17  18  ~/stencil.job
-'8  1  0  ~/stencil.out
-'9  35  42  ~/stencil.c
+'0  13  0  ~/.bashrc
+'1  49  0  ~/stencil8000.out
+'2  49  0  ~/stencil.out
+'3  1  0  ~/stencil.out
+'4  35  0  ~/stencil.c
+'5  380  0  ~/.bash_history
+'6  2  29  ~/Makefile
+'7  80  3  ~/stencil.c
+'8  1  0  ~/stencilc
+'9  49  0  ~/stencil-4096.out
 
 # Jumplist (newest first):
+-'  13  0  ~/.bashrc
+-'  49  0  ~/stencil8000.out
 -'  49  0  ~/stencil.out
--'  90  20  ~/stencil.c
--'  89  5  ~/stencil.c
+-'  1  0  ~/stencil.out
+-'  35  0  ~/stencil.c
+-'  80  5  ~/stencil.c
+-'  380  0  ~/.bash_history
+-'  441  0  ~/.bash_history
+-'  1  0  ~/.bashrc
+-'  2  29  ~/Makefile
+-'  1  0  ~/stencil.c
+-'  1  0  ~/stencilc
+-'  49  0  ~/stencil-4096.out
+-'  1  0  ~/stencil8000.out
+-'  1  0  ~/stencil-4096.out
+-'  1  0  ~/stencil4096.out
+-'  17  18  ~/stencil8000.job
+-'  1  0  ~/stencil8000.job
+-'  17  18  ~/stencil4096.job
+-'  1  0  ~/stencil4096.job
+-'  2  0  ~/versions/intro-hpc-stencil/stencil.out
+-'  1  0  ~/versions/intro-hpc-stencil/stencil.c
+-'  55  2  ~/versions/intro-hpc-stencil/stencil.c
+-'  56  2  ~/versions/intro-hpc-stencil/stencil.c
+-'  54  2  ~/versions/intro-hpc-stencil/stencil.c
+-'  2  67  ~/versions/intro-hpc-stencil/Makefile
+-'  1  0  ~/versions/intro-hpc-stencil/stencil8000.out
+-'  1  0  ~/versions/intro-hpc-stencil/stencil4096.out
+-'  70  0  ~/versions/intro-hpc-stencil/stencil.c
+-'  48  2  ~/versions/intro-hpc-stencil/stencil.c
+-'  418  0  ~/.bash_history
+-'  175  0  ~/versions/intro-hpc-stencil/stencil.c
+-'  160  4  ~/versions/intro-hpc-stencil/stencil.c
+-'  152  4  ~/versions/intro-hpc-stencil/stencil.c
+-'  29  2  ~/versions/intro-hpc-stencil/stencil.c
+-'  124  6  ~/versions/intro-hpc-stencil/stencil.c
+-'  3  0  ~/versions/intro-hpc-stencil/stencil.out
+-'  127  10  ~/versions/intro-hpc-stencil/stencil.c
+-'  101  4  ~/versions/intro-hpc-stencil/stencil.c
+-'  1  0  ~/versions/intro-hpc-stencil/stencilc
+-'  148  2  ~/versions/intro-hpc-stencil/stencil.c
+-'  1  0  ~/versions/intro-hpc-stencil/stenci.out
+-'  75  0  ~/versions/intro-hpc-stencil/stencil.c
+-'  1  0  ~/versions/intro-hpc-stencil/stencil
+-'  73  0  ~/versions/intro-hpc-stencil/stencil.c
+-'  110  6  ~/versions/intro-hpc-stencil/stencil.c
+-'  111  8  ~/versions/intro-hpc-stencil/stencil.c
+-'  1  0  ~/.bash_history
+-'  1  0  ~/versions/.bash_history
+-'  468  9  ~/versions/intro-hpc-stencil/stencil.optrpt
+-'  452  9  ~/versions/intro-hpc-stencil/stencil.optrpt
+-'  1  0  ~/versions/intro-hpc-stencil/stencil.out
+-'  33  0  ~/versions/intro-hpc-stencil/stencil.optrpt
+-'  1  0  ~/versions/intro-hpc-stencil/Makefile
+-'  12  40  ~/versions/intro-hpc-stencil/.bashrc
+-'  13  0  ~/versions/intro-hpc-stencil/.bashrc
+-'  69  3  ~/versions/intro-hpc-stencil/stencil.c
+-'  1  0  ~/versions/intro-hpc-stencil/stencil.optrpt
+-'  17  0  ~/versions/intro-hpc-stencil/stencil.job
+-'  1  0  ~/versions/intro-hpc-stencil/.bashrc
+-'  1  0  ~/versions/intro-hpc-stencil/bashrc
+-'  42  0  ~/versions/intro-hpc-stencil/stencil.c
+-'  41  0  ~/versions/intro-hpc-stencil/stencil.c
+-'  131  0  ~/versions/intro-hpc-stencil/stencil.c
+-'  62  4  ~/versions/intro-hpc-stencil/stencil.c
+-'  3  0  ~/versions/intro-hpc-stencil/stencil4096.job
+-'  2  0  ~/versions/intro-hpc-stencil/stencil4096.job
+-'  3  18  ~/versions/intro-hpc-stencil/stencil8000.job
+-'  17  0  ~/versions/intro-hpc-stencil/stencil8000.job
+-'  17  0  ~/versions/intro-hpc-stencil/stencil4096.job
+-'  1  0  ~/versions/intro-hpc-stencil/stencil8000.job
+-'  1  0  ~/versions/intro-hpc-stencil/stencil4096.job
+-'  1  0  ~/versions/intro-hpc-stencil/stencil.job
+-'  79  5  ~/stencil.c
 -'  7  0  ~/stencil.out
--'  37  1  ~/stencil.c
--'  79  2  ~/stencil.c
--'  2  38  ~/Makefile
+-'  31  1  ~/stencil.c
+-'  69  2  ~/stencil.c
 -'  17  18  ~/stencil.job
 -'  18  0  ~/stencil.job
--'  1  0  ~/stencil.out
--'  35  42  ~/stencil.c
--'  96  4  ~/stencil.c
--'  178  0  ~/stencil.c
--'  93  3  ~/stencil.c
--'  92  3  ~/stencil.c
+-'  29  42  ~/stencil.c
+-'  87  4  ~/stencil.c
+-'  155  0  ~/stencil.c
+-'  84  3  ~/stencil.c
+-'  83  3  ~/stencil.c
 -'  1  0  ~/makefile
--'  179  0  ~/stencil.c
--'  13  10  ~/.bashrc
+-'  156  0  ~/stencil.c
 -'  12  0  ~/.bashrc
--'  1  0  ~/stencil.c
 -'  178  0  ~/stencilbase.c
 -'  87  5  ~/stencilbase.c
 -'  1  0  ~/stencil.job
 -'  1  0  ~/stencilbase.c
--'  176  2  ~/stencil.c
--'  101  2  ~/stencil.c
--'  175  2  ~/stencil.c
--'  100  2  ~/stencil.c
--'  177  0  ~/stencil.c
--'  78  23  ~/stencil.c
--'  9  0  ~/stencil.c
--'  17  4  ~/stencil.c
--'  33  0  ~/stencil.c
--'  49  4  ~/stencil.c
--'  1  0  ~/Makefil
--'  116  5  ~/stencil.c
--'  11  0  ~/.bashrc
--'  1  0  ~/bashrc
--'  103  3  ~/stencil.c
--'  99  0  ~/stencil.c
--'  3  1  ~/stencil.c
--'  2  1  ~/stencil.c
--'  135  0  ~/stencil.c
--'  21  2  ~/stencil.c
--'  1  0  ~/make
--'  44  2  ~/stencil.c
--'  40  9  ~/stencil.c
--'  20  17  ~/stencil.c
--'  27  2  ~/stencil.c
--'  42  1  ~/stencil.c
--'  38  8  ~/stencil.c
--'  102  4  ~/stencil.c
--'  147  5  ~/stencil.c
--'  126  0  ~/stencil.c
--'  196  6  ~/stencil.c
--'  191  0  ~/stencil.c
--'  115  4  ~/stencil.c
--'  83  4  ~/stencil.c
--'  105  2  ~/stencil.c
--'  55  2  ~/stencil.c
--'  81  52  ~/stencil.c
--'  73  18  ~/stencil.c
--'  72  26  ~/stencil.c
--'  10  0  ~/.bashrc
--'  1  0  ~/.bash
--'  1  0  ~/.bashsrc
--'  1  0  ~/stenil.c
--'  12  0  ~/stencil.c
--'  119  0  ~/stencil.c
--'  95  2  ~/stencil.c
--'  10  0  ~/stencil.c
--'  11  0  ~/stencil.c
--'  75  103  ~/stencil.c
--'  74  4  ~/stencil.c
--'  1  0  ~/Makfile
--'  120  2  ~/stencil.c
--'  1  0  ~/.bashrc
--'  1  0  ~/Makefile
--'  94  0  ~/stencil.c
--'  1  0  ~/Makfile
--'  1  0  ~/Makfile
--'  1  0  ~/Makfile
--'  1  0  ~/.bash
--'  1  0  ~/.bashsrc
--'  1  0  ~/stenil.c
--'  1  0  ~/Makfile
--'  1  0  ~/Makfile
--'  1  0  ~/Makfile
--'  1  0  ~/Makfile
--'  1  0  ~/.bash
--'  1  0  ~/.bashsrc
--'  1  0  ~/stenil.c
--'  1  0  ~/Makfile
--'  1  0  ~/Makfile
--'  1  0  ~/Makfile
--'  1  0  ~/Makfile
--'  1  0  ~/.bash
+-'  153  2  ~/stencil.c
+-'  92  2  ~/stencil.c
+-'  152  2  ~/stencil.c
+-'  91  2  ~/stencil.c
+-'  154  0  ~/stencil.c
+-'  68  23  ~/stencil.c
 
 # History of marks within files (newest to oldest):
+
+> ~/.bashrc
+	"	13	0
+
+> ~/stencil8000.out
+	"	49	0
 
 > ~/stencil.out
 	"	49	0
 
 > ~/stencil.c
-	"	90	20
-	^	90	21
-	.	90	21
-	+	187	5
-	+	188	5
-	+	187	30
-	+	8	49
-	+	9	70
-	+	10	77
-	+	195	55
-	+	196	49
-	+	144	6
-	+	145	32
-	+	147	8
-	+	102	50
-	+	38	70
-	+	42	73
-	+	38	27
-	+	42	31
-	+	39	0
-	+	38	26
-	+	39	28
-	+	40	1
-	+	41	0
-	+	40	16
-	+	42	47
-	+	43	32
-	+	45	0
-	+	44	49
-	+	38	8
-	+	42	8
-	+	20	7
-	+	20	27
-	+	27	2
-	+	28	1
-	+	27	1
-	+	20	14
-	+	20	29
-	+	40	9
-	+	44	9
-	+	20	2
-	+	23	38
-	+	26	0
-	+	24	13
-	+	25	12
-	+	21	11
-	+	134	29
-	+	135	31
-	+	85	109
-	+	103	2
-	+	76	70
-	+	77	46
-	+	79	68
-	+	79	48
-	+	80	0
-	+	103	149
-	+	103	2
+	"	35	0
+	^	35	0
+	.	29	1
+	+	81	4
+	+	96	0
+	+	96	0
+	+	96	0
+	+	97	0
+	+	104	5
+	+	28	23
 	+	32	0
-	+	49	0
-	+	17	58
-	+	8	56
-	+	9	58
-	+	8	82
-	+	9	85
-	+	8	66
-	+	9	68
-	+	76	2
-	+	75	45
-	+	77	0
-	+	76	9
-	+	175	36
-	+	92	20
-	+	91	3
-	+	92	3
-	+	91	28
-	+	91	0
-	+	93	230
-	+	93	170
-	+	93	144
-	+	93	80
-	+	93	119
-	+	93	208
-	+	93	189
-	+	93	161
-	+	93	77
-	+	93	122
-	+	93	79
-	+	93	86
-	+	92	18
-	+	93	35
-	+	90	21
-	+	12	74
-	+	136	75
-	+	35	6
-	+	37	38
-	+	35	48
-	+	37	48
-	+	35	19
-	+	37	24
-	+	90	22
-	+	88	29
-	+	89	35
-	+	90	21
+	+	31	1
+	+	29	1
+
+> ~/.bash_history
+	"	380	0
 
 > ~/Makefile
-	"	2	38
-	^	2	39
-	.	2	38
+	"	2	29
+	^	2	29
+	.	2	29
 	+	2	15
 	+	1	18
 	+	2	16
@@ -324,57 +243,103 @@
 	+	1	0
 	+	2	27
 	+	1	9
-	+	2	38
+	+	2	29
 
-> ~/stencil.job
+> ~/stencilc
+	"	1	0
+
+> ~/stencil-4096.out
+	"	49	0
+
+> ~/stencil4096.out
+	"	1	0
+
+> ~/stencil8000.job
 	"	17	18
 	^	17	19
-	.	17	19
-	+	17	19
+	.	17	18
+	+	2	18
+	+	3	18
+	+	17	18
 
-> ~/makefile
+> ~/stencil4096.job
+	"	17	18
+	^	17	19
+	.	17	18
+	+	2	18
+	+	3	15
+	+	2	15
+	+	17	18
+
+> ~/versions/intro-hpc-stencil/stencil.out
+	"	2	0
+	.	2	0
+	+	2	0
+
+> ~/versions/intro-hpc-stencil/stencil.c
 	"	1	0
-
-> ~/.bashrc
-	"	13	10
-	^	13	11
-	.	13	10
-	+	10	27
-	+	11	33
-	+	12	10
-	+	12	33
-	+	12	54
-	+	12	54
-	+	12	41
-	+	12	41
-	+	12	41
-	+	12	41
-	+	13	10
-
-> ~/stencilbase.c
-	"	178	0
-
-> ~/Makefil
-	"	1	0
-
-> ~/bashrc
-	"	1	0
-
-> ~/make
-	"	1	0
-
-> ~/.bash
-	"	1	0
-
-> ~/.bashsrc
-	"	1	0
-
-> ~/stenil.c
-	"	1	0
-
-> ~/Makfile
-	"	1	0
-	^	1	0
-	.	1	0
+	^	56	23
+	.	56	22
 	+	1	1
+	+	73	27
+	+	100	28
+	+	101	13
+	+	108	27
+	+	109	13
+	+	110	48
+	+	111	19
+	+	110	34
+	+	73	1
+	+	75	17
+	+	100	51
+	+	101	51
+	+	28	51
+	+	29	55
+	+	28	51
+	+	29	55
+	+	100	59
+	+	101	59
+	+	127	28
+	+	124	27
+	+	125	29
+	+	124	26
+	+	125	50
+	+	124	49
+	+	28	42
+	+	29	53
+	+	151	25
+	+	152	27
+	+	159	25
+	+	160	27
+	+	48	1
+	+	54	19
+	+	55	15
+	+	56	22
+
+> ~/versions/intro-hpc-stencil/Makefile
+	"	2	67
+	^	2	68
+	.	2	67
+	+	2	1
 	+	1	0
+	+	2	44
+	+	1	1
+	+	2	67
+
+> ~/versions/intro-hpc-stencil/stencil8000.out
+	"	1	0
+
+> ~/versions/intro-hpc-stencil/stencil4096.out
+	"	1	0
+
+> ~/versions/intro-hpc-stencil/stencilc
+	"	1	0
+
+> ~/versions/intro-hpc-stencil/stenci.out
+	"	1	0
+
+> ~/versions/intro-hpc-stencil/stencil
+	"	1	0
+
+> ~/versions/.bash_history
+	"	1	0
